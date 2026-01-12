@@ -24,18 +24,16 @@
         <header class="greeting">
           <h1>
             Приветствую! Меня зовут
-            <span class="highlight">Пыстогов Константин</span>
+            <p>
+              <span class="highlight">Пыстогов Константин</span>
+            </p>
           </h1>
           <p class="subtitle">Добро пожаловать на страницу обо мне</p>
         </header>
 
         <div class="photo-gallery">
           <div class="photo-frame">
-            <img
-              src="Photo/photo1.jpg"
-              alt="фото 1"
-              class="photo"
-            />
+            <img src="Photo/photo1.jpg" alt="фото 1" class="photo" />
             <div class="photo-overlay">Нет</div>
           </div>
           <div class="photo-frame">
@@ -68,29 +66,37 @@
         <div class="social-links">
           <h3>Связь со мной</h3>
           <div class="links-container">
-            <p>
-              <a
-                href="https://github.com/KonstaninP59"
-                target="_blank"
-                class="social-btn github-btn"
-              >
-                <i class="fab fa-github"></i>
-                <span>GitHub Проекты</span>
-              </a>
-            </p>
-            <p>
-              <a
-                href="https://vk.com/konstantin59ru"
-                target="_blank"
-                class="social-btn vk-btn"
-              >
-                <i class="fab fa-vk"></i>
-                <span>ВКонтакте</span>
-              </a>
-            </p>
+            <a
+              href="https://github.com/KonstaninP59"
+              target="_blank"
+              class="social-btn github-btn"
+            >
+              <i class="fab fa-github"></i>
+              <span>GitHub Проекты</span>
+            </a>
+            <a
+              href="https://vk.com/konstantin59ru"
+              target="_blank"
+              class="social-btn vk-btn"
+            >
+              <i class="fab fa-vk"></i>
+              <span>ВКонтакте</span>
+            </a>
           </div>
         </div>
       </div>
     </section>
+    <script>
+      // Добавляем эффект при загрузке страницы
+      document.addEventListener("DOMContentLoaded", function () {
+        const elements = document.querySelectorAll(".photo-frame, .social-btn");
+        elements.forEach((el, index) => {
+          setTimeout(() => {
+            el.style.opacity = "1";
+            el.style.transform = "translateY(0)";
+          }, 100 * index);
+        });
+      });
+    </script>
   </body>
 </html>

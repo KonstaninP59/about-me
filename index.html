@@ -32,18 +32,18 @@
         <div class="photo-gallery">
           <div class="photo-frame">
             <img
-              src="./Photo/photo1.jpg"
+              src="Photo/photo1.jpg"
               alt="фото 1"
               class="photo"
             />
             <div class="photo-overlay">Нет</div>
           </div>
           <div class="photo-frame">
-            <img src="./Photo/photo2.jpg" alt="фото 2" class="photo" />
+            <img src="Photo/photo2.jpg" alt="фото 2" class="photo" />
             <div class="photo-overlay">Ничего</div>
           </div>
           <div class="photo-frame">
-            <img src="./Photo/photo3.jpg" alt="фото 3" class="photo" />
+            <img src="Photo/photo3.jpg" alt="фото 3" class="photo" />
             <div class="photo-overlay">Невозможного</div>
           </div>
         </div>
@@ -92,18 +92,5 @@
         </div>
       </div>
     </section>
-
-    <script>
-      // Добавляем эффект при загрузке страницы
-      document.addEventListener("DOMContentLoaded", function () {
-        const elements = document.querySelectorAll(".photo-frame, .social-btn");
-        elements.forEach((el, index) => {
-          setTimeout(() => {
-            el.style.opacity = "1";
-            el.style.transform = "translateY(0)";
-          }, 100 * index);
-        });
-      });
-    </script>
   </body>
 </html>
